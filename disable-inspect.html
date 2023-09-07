@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Disable inspect element</h2>
+
+    <script>
+      // take body to change the content
+      const body = document.getElementsByTagName("body");
+      // stop keyboard shortcuts
+      window.addEventListener("keydown", (event) => {
+        if (e.event === "F12") {
+          event.preventDefault();
+          return false;
+        }
+        if (
+          event.ctrlKey &&
+          event.shiftKey &&
+          (event.key === "S" || event.key === "s")
+        ) {
+          event.preventDefault();
+        }
+        if (event.ctrlKey && event.shiftKey && event.key === "C") {
+          event.preventDefault();
+        }
+        if (
+          event.ctrlKey &&
+          event.shiftKey &&
+          (event.key === "E" || event.key === "e")
+        ) {
+          event.preventDefault();
+        }
+        if (
+          event.ctrlKey &&
+          event.shiftKey &&
+          (event.key === "I" || event.key === "i")
+        ) {
+          event.preventDefault();
+        }
+        if (
+          event.ctrlKey &&
+          event.shiftKey &&
+          (event.key === "J" || event.key === "j")
+        ) {
+          event.preventDefault();
+        }
+        if (
+          event.ctrlKey &&
+          event.shiftKey &&
+          (event.key === "K" || event.key === "k")
+        ) {
+          event.preventDefault();
+        }
+        if (
+          event.ctrlKey &&
+          event.shiftKey &&
+          (event.key === "U" || event.key === "u")
+        ) {
+          event.preventDefault();
+        }
+      });
+      // stop right click
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>
